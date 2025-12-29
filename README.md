@@ -1,42 +1,42 @@
-# -Gene-Expression-Omnibus-GEO-Dataset-GSE68086
-Samples: 285 columns (including controls), Features: 57,736 Ensembl gene IDs (rows), Data Type: Intron-spanning read counts
+# Gene Expression Classification Using Machine Learning
+Explore the basic workflow of gene expression data analysis, including preprocessing, dimensionality reduction, and classification.
 
-## Project Overview
-This project explores gene expression data from the Gene Expression Omnibus (GEO) Dataset: GSE68086.
-The goal is to understand the basic workflow of gene expression data analysis, including preprocessing, dimensionality reduction, and classification.
+## Project Motivation
+Gene expression data is high-dimensional and noisy, making it a challenging yet meaningful application of machine learning in bioinformatics.
+This project explores whether expression profiles can distinguish disease and healthy samples using classical machine learning techniques.
 
-## Dataset
-- Source: Gene Expression Omnibus (GEO)
-- Accession number: GSE68086
-- Accessed via: Kaggle
-- Description: Gene expression profiles with disease status labels
+## Dataset & Task Definition
+The dataset is from the Gene Expression Omnibus (GEO), accession **GSE68086**.
 
-The raw data are publicly available and are not included in this repository.
+- **Task type:** Binary classification
+- **Input:** Gene expression levels
+- **Output:** Disease status
 
-## Methods
-The following steps were performed:
+## Methodology
+The analysis followed a structured bioinformatics workflow:
 
-1. Data preprocessing
-   - Removed samples with unknown disease status
-   - Standardized gene expression values using StandardScaler
+1. Data cleaning and label verification  
+2. Exploratory analysis and dimensionality reduction using PCA  
+3. Feature scaling  
+4. Baseline classification model training  
 
-2. Exploratory analysis
-   - Principal Component Analysis (PCA) to visualize sample distribution
+PCA was used to visually assess class separability before modeling.
 
-3. Modeling
-   - Logistic Regression for disease classification
-   - Model evaluation using accuracy and ROC-AUC
+## Models & Evaluation
+A baseline logistic regression model was trained.
 
-## Tools
-- Python
-- pandas, numpy
-- scikit-learn
-- matplotlib / seaborn
+Evaluation focused on:
+- Accuracy
+- ROC-AUC
+- Conceptual understanding of ranking-based metrics
 
-## What I Learned
-- How to preprocess high-dimensional gene expression data
-- Why feature scaling is necessary before PCA and logistic regression
-- How to evaluate classification models using different metrics
+Special attention was paid to interpreting ROC-AUC in the context of biological data.
+
+## Key Takeaways
+This project provided experience with:
+- High-dimensional biological datasets
+- Dimensionality reduction for exploratory analysis
+- Evaluation metrics beyond simple accuracy
 
 ## Future Work
 - Try additional models such as Random Forest or SVM
